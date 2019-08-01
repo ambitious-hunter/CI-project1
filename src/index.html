@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html ng-app="bandApp">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Anastasia Tarutina">
+
+  <title>The Monkees</title>
+
+  <!-- Bootstrap Core CSS -->
+  <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <!-- Custom Fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- SCROLLS -->
+  <!-- load bootstrap and fontawesome via CDN -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- STYLING -->
+  <link rel="stylesheet" type="text/css" href="css/creative.css">
+  <link rel="icon" href="img/favicon.png">
+</head>
+
+<body id="page-top"> <!-- implement in css -->
+
+  <!-- HEADER AND NAVBAR -->
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand page-scroll" href="#!/">the monkees</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="page-scroll" href="#bio">Bio</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#gallery">Gallery</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#!/music">Music</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#!/video">Video</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#!/events">Events</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#!/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <ng-view></ng-view>
+
+  <!-- FOOTER AND PROMOS -->
+  <div class="footer">                        
+    <div class="container">
+      <div class="community">
+        <a href="#!/contact">Community</a><p>
+          <span><a href="https://www.facebook.com/TheMonkees" target="_blank"><img src="img/facebook.png" alt="facebook link"></a></span>
+          <span><a href="https://twitter.com/TheMonkees" target="_blank"><img src="img/twitter.png" alt="twitter link"></a></span>
+
+          <span><a href="https://www.youtube.com/user/themonkees" target="_blank"><img src="img/youtube.png" alt="youtube link"></a></span>
+          <span><a href="https://www.instagram.com/themonkees/" target="_blank"><img src="img/instagram.png" alt="insta link"></a></span>
+        </p></div><!--/.community div-->
+
+        <div class="buymusic">
+          <a href="#!/music">Buy Our Music<p class="underline"></p></a>
+          <a href="https://geo.itunes.apple.com/us/album/daydream-believer/id4512505?i=4512412&amp;mt=1&amp;app=music" target="_blank" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/images/badges/en-us/badge_music-lrg.svg) no-repeat;background-size:contain;width:100px;height:30px;" class="itunes"></a>
+          <a href="https://www.amazon.com/The-Monkees/e/B000APSYTO" target="_blank" style="width:100px;height:30px;overflow:hidden;display:inline-block;background:url(img/buy3.gif) no-repeat;background-size:contain" class="amazon"></a> 
+        </div><!--/.buymusic div -->
+
+        <div class="subscribe">
+          <a href="#!/contact">Bookings</a>
+          <subscribe><div ng-controller="SubModalController" class="ng-scope">
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#connectEmail">Subscribe</button>
+          </div></subscribe>
+        </div><!--/.subscribe div-->
+      </div><!--/.container div-->
+    </div>
+    <!-- Modal -->
+    <div id="connectEmail" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <center><h4 class="modal-title">Join our feed</h4></center>
+          </div>
+          <div class="modal-body">
+            <form action="#!/thxNewsletter">
+              <center>
+                <label>Name</label><br>
+                <input class ="joinHighlight" type="text" name="Name" autocomplete="name" required="true"><br>
+                <label>Age</label><br>
+                <input class ="joinHighlight" type="number" name="Age" required="true"><br>
+                <label>Email</label><br>
+                <input class ="joinHighlight" type="text" name="email" placeholder="example@email.com" autocomplete='email' required="true"><br><br>
+                <input class="submitHilight" type="submit" value="Submit">
+              </center>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SPELLS -->
+    <!-- load angular and angular route via CDN -->
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular/angular-route.js"></script>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- ROUTING AND ICON -->
+    <script src="js/script.js"></script>
+    <!-- <script src="js/creative.js"></script> -->
+    <script src="js/player.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#config-web-app -->
+
+   <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDrBf4M26aRUtQyrl21hHXtSOzVUf0ue3w",
+      authDomain: "bandproject-201611.firebaseapp.com",
+      databaseURL: "https://bandproject-201611.firebaseio.com",
+      projectId: "bandproject-201611",
+      storageBucket: "",
+      messagingSenderId: "940917327650",
+      appId: "1:940917327650:web:898aecc5f0bf1ba6"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</body>
+</html>

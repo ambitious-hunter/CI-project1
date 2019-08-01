@@ -1,0 +1,77 @@
+<header class="about-bg">
+	<div class="header-content" style="top: 53% !important;">
+		<div class="about-header header-content-inner">
+			<h2 style="margin-bottom: 20px;">Want The Monkees to play at your event?</h2>
+			<p>With over 20 years of experience, we know how to make your party the best one ever. <br>
+			Just fill in the form and we will get back to you as soon as possible.</p>
+			<form action="#!/thxBooking">
+				<h2>Contact Information</h2>
+				<div class="row names">
+					<div class="col-sm-6">
+						<label>First name</label><br>
+						<input type="text" name="firstname" class="blackT"  required="true">
+					</div>
+					<div class="col-sm-6">
+						<label>Last name</label><br>
+						<input type="text" name="lastname" class="blackT"  required="true">
+					</div>
+				</div>
+				<div class="row contact">
+					<div class="col-sm-6">
+						<label>Contact Number</label><br>
+						<input type="tel" name="contacttel" class="blackT"  required="true">
+					</div>
+					<div class="col-sm-6">
+						<label>Email</label><br>
+						<input type="email" name="contactEmail" class="blackT"  required="true">
+					</div>
+				</div>
+				<h2>Event Information</h2>
+				<div class="row venue">
+					<div class="col-sm-6">
+						<label>Event Type</label><br>
+						<select name="venue" size="1" class="blackT"  required="true">
+							<option value="? undefined:undefined ?"></option>
+							<option value="wedding">Wedding</option>
+							<option value="musicvenue">Music Venue</option>
+							<option value="bar">Bar</option>
+							<option value="hotel">Hotel</option>
+							<option value="reception">Reception</option>
+							<option value="nightclub">Nightclub</option>
+							<option value="festival">Festival</option>
+							<option value="corperate event">Corperate Event</option>
+							<option value="private">Private</option>
+						</select>
+					</div>
+					<div class="col-sm-6">
+						<label>*Venue Capacity</label><br>
+						<select name="capacity" size="1" class="blackT"  required="true">
+							<option value="? undefined:undefined ?"></option>
+							<option value="100+">100+</option>
+							<option value="200+">200+</option>
+							<option value="300+">300+</option>
+							<option value="400+">400+</option>
+							<option value="500+">500+</option>
+						</select>
+					</div>
+				</div>
+				<div class="row details">
+					<div class="col-sm-6">
+						<label>Event Date</label><br>
+						<input type="date" name="eventday" class="blackT"  required="true">
+					</div>
+					<div class="col-sm-6">
+						<label>Event Location</label><br>
+						<input type="text" name="eventlocation" class="blackT" required="true">
+					</div>
+				</div>
+				<h2>Payment Type</h2>
+				<input type="radio" name="payment" value="visa" checked>Visa<br>
+				<input type="radio" name="payment" value="master">MasterCard<br>
+				<input type="radio" name="payment" value="express">AmericanExpress<br>
+				<input type="radio" name="payment" value="cash">Cash<br>
+				<input type="submit" class="blackT" value="Submit">
+			</form>
+		</div>
+	</div>
+</header>
